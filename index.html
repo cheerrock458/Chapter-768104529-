@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แบบฟอร์มลงทะเบียน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- วิดีโอพื้นหลัง -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <!-- ปุ่มควบคุม -->
+    <div class="controls">
+        <button onclick="playVideo()">Play</button>
+        <button onclick="pauseVideo()">Stop</button>
+    </div>
+
+    <!-- กล่องฟอร์ม -->
+    <div class="form-box">
+        <h2>แบบฟอร์มลงทะเบียน</h2>
+
+        <form>
+            <label>ชื่อ-นามสกุล:</label>
+            <input type="text" placeholder="กรุณากรอกชื่อ-นามสกุล">
+
+            <label>อีเมล:</label>
+            <input type="email" placeholder="example@domain.com">
+
+            <label>รหัสผ่าน:</label>
+            <input type="password">
+
+            <!-- ✅ แก้เพศแล้ว -->
+            <label>เพศ:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender"> ชาย</label>
+                <label><input type="radio" name="gender"> หญิง</label>
+            </div>
+
+            <label>ตำแหน่ง:</label>
+            <select>
+                <option>Web Development</option>
+                <option>Graphic Design</option>
+                <option>Marketing</option>
+            </select>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">ลงทะเบียน</button>
+                <button type="reset" class="btn-reset">ล้างข้อมูล</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
